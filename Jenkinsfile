@@ -8,7 +8,7 @@ pipeline{
     stage("Cloning Git"){
       steps{
         echo 'Cloning Repo...'
-		git([url: 'https://github.com/pranshulmahajan/PHP.git', branch: 'master', credentialsId: 'GITHUB_CREDS'])
+		git([url: 'https://github.com/pranshulmahajan/PHP.git', branch: 'master', credentialsId: ''])
       }
     }
     stage('Building image') {
