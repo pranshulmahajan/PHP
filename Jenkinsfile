@@ -1,14 +1,14 @@
 pipeline{
   agent any
   environment{
-	imagename = "dikshant1994/php"
+	imagename = "pranshul0412/auto-php"
 	dockerImage = ''
   }
   stages{
     stage("Cloning Git"){
       steps{
         echo 'Cloning Repo...'
-		git([url: 'https://github.com/dikshantSharma1994/php.git', branch: 'master', credentialsId: 'GITHUB_CREDS'])
+		git([url: 'https://github.com/pranshulmahajan/PHP.git', branch: 'master', credentialsId: 'GITHUB_CREDS'])
       }
     }
     stage('Building image') {
